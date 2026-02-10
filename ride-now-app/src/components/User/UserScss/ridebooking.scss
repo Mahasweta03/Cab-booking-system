@@ -1,0 +1,278 @@
+@use 'sass:color';
+ 
+/* Color Palette */
+$primary-color: #007bff; // A professional, clean blue
+$secondary-color: #28a745; // A success-oriented green for confirmation
+$danger-color: #d20000; // A standard red for cancel actions
+$background-color: #f8f9fa; // Light gray for a subtle background
+$card-background: #ffffff; // White for content cards
+$text-color: #343a40; // Dark gray for body text
+$heading-color: #161e27; // Very dark gray for headings
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // A soft shadow for depth
+$border-radius: 12px; // Consistent border radius for a modern feel
+
+.Booking-container {
+  display: flex;
+  justify-content: center;
+  // align-items: stretch;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: $background-color;
+  // font-family: 'Roboto', sans-serif;
+  color: $text-color;
+  // min-height: 100vh;
+  width: 100%;
+  
+  .left-container {
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    background-color: $card-background;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: 693px;
+    height: 648px;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $heading-color;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    // Styles adapted from the reference BookingForm.scss
+    .location-input-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      .location-input-wrapper {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #ccc;
+        padding: 5px 0;
+
+        .icon {
+          font-size: 1.2rem;
+          margin-right: 10px;
+        }
+        .pickup-icon { color: $primary-color; }
+        .drop-icon { color: $danger-color; }
+
+        .location-input {
+          flex: 1;
+          padding: 10px 0;
+          font-size: 1rem;
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+
+        .current-location-icon {
+          font-size: 1.5rem;
+          color: $primary-color;
+          cursor: pointer;
+          transition: transform 0.2s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .suggestions-list {
+        list-style: none;
+        padding: 0;
+        margin: 5px 0 0;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        position: absolute;
+        width: 100%;
+        z-index: 1000; // Ensure it's on top
+
+        li {
+          padding: 12px 15px;
+          cursor: pointer;
+          border-bottom: 1px solid #eee;
+          &:last-child {
+            border-bottom: none;
+          }
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+      }
+    }
+
+    .cab-type-selector {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      .cab-type-item {
+        border: 1px solid #ddd;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        background-color: #f9f9f9;
+        text-align: center;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+
+        &.active {
+          border: 2px solid $secondary-color;
+          transform: scale(1.05);
+          box-shadow: 0 4px 10px rgba($secondary-color, 0.3);
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 12px;
+          margin: 0;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .price-display {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      background-color: color.adjust($primary-color, $alpha: -0.9);
+      border-radius: 8px;
+    }
+
+    button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  margin-top: 1rem;
+  position: relative;
+  // overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+  }
+
+  &:hover:before {
+    left: 100%;
+  }
+
+  &.confirm-button {
+    background-color: $secondary-color;
+    color: white;
+    box-shadow: 0 4px 12px rgba($secondary-color, 0.4);
+    top: -25px;
+
+    &:hover {
+      background-color: color.adjust($secondary-color, $lightness: -5%);
+      transform: translateY(-3px) scale(1.02);
+    }
+  }
+
+  &.cancel-button {
+    background-color: $danger-color;
+    color: white;
+    box-shadow: 0 4px 12px rgba($danger-color, 0.4);
+    top: -20px;
+
+    &:hover {
+      background-color: color.adjust($danger-color, $lightness: -5%);
+      transform: translateY(-3px) scale(1.02);
+    }
+  }
+}
+
+    
+    img {
+      // margin-top: 2rem;
+      // border: 1px solid #e0e0e0;
+      object-fit: cover;
+      align-self: center;
+    }
+  }
+
+  .right-container {
+    flex: 2;
+    background-color: $card-background;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    
+    .leaflet-container {
+      height: 100%;
+      min-height: 500px; // Ensure the map has a minimum height
+      border-radius: $border-radius;
+      // display: none;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .Booking-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .left-container, .right-container {
+      width: 100%;
+      max-width: 90%;
+    }
+
+    .right-container .leaflet-container {
+      min-height: 400px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .Booking-container {
+    padding: 1rem;
+
+    .left-container {
+      padding: 1.5rem;
+      
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

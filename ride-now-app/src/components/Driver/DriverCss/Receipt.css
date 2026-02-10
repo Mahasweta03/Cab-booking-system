@@ -1,0 +1,164 @@
+.receipt-wrapper {
+  /* padding: 2rem;
+  margin-left: 13.75rem; /* 220px sidebar */
+  margin-top: 10px;   
+  /* min-height: calc(100vh - 4.375rem); */
+  /* background-color: #f0f0f0; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 24rem;
+}
+
+.feedback-form {
+  margin-top: 1.5rem;
+  border-top: 1px dashed #ccc;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.feedback-form h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.star-rating {
+  margin-bottom: 1rem;
+}
+
+.star-rating span {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: color 0.2s ease;
+}
+
+.star-rating span.active {
+  color: #FFD724;
+}
+
+.star-rating span:hover {
+  color: #FFD724;
+}
+
+.feedback-form .input {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.feedback-form .button {
+  width: 50%;
+  padding: 0.75rem;
+  background-color: #FFD724;
+  color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.feedback-form .button:hover {
+  opacity: 0.8;
+}
+
+.feedback-form .button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.thank-you-message {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 0.5rem;
+  color: #155724;
+  font-weight: bold;
+  text-align: center;
+}
+
+.receipt-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 46rem;
+  /* padding: 2rem; */
+  background-color: #ffffff;
+  border: 2px solid #e3ce2b;
+  box-shadow: 0 1rem 1rem rgba(92, 64, 64, 0.324);
+  border-radius: 2rem;
+  color: #222;
+}
+
+.receipt-heading {
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.625rem;
+  width: 100%;
+}
+
+.receipt-details {
+  width: 100%;
+}
+
+.receipt-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.close-btn-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.close-btn {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #a71d2a;
+}
+
+@media (max-width: 768px) {
+  .receipt-wrapper {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .receipt-card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .receipt-heading {
+    font-size: 1.5rem;
+  }
+
+  .receipt-details p {
+    font-size: 0.95rem;
+  }
+
+  .close-btn {
+    width: 100%;
+  }
+}

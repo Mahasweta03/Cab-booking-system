@@ -1,0 +1,125 @@
+$primary-color: #FFD724;
+$background-color: #f2d062;
+$input-bg: #fff;
+$text-color: #333;
+$icon-color: #555;
+
+.location-input-group {
+  position: relative;
+  margin-bottom: 1rem;
+
+  .location-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: $input-bg;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .icon {
+      color: $icon-color;
+      margin-right: 0.75rem;
+    }
+
+    .location-input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 1rem;
+      background-color: transparent;
+    }
+
+    .current-location-icon {
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+
+  .suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    z-index: 10;
+
+    li {
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+
+.cab-type-selector {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+
+  .cab-type-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+
+    &.active {
+      background-color: rgba($primary-color, 0.3);
+      border: 1px solid $primary-color;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.price-display {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.confirm-button,
+.cancel-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.confirm-button {
+  background-color: $primary-color;
+  color: #000;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: #000;
+
+  &:hover {
+    background-color: #bbb;
+  }
+}

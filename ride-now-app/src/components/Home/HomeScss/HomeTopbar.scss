@@ -1,0 +1,138 @@
+
+$sidebar-width: 250px;
+$transition-speed: 0.3s;
+$bg-color: #f8f9fa;
+$text-color: #333;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(237, 234, 225, 0.5); 
+  height: 56px;
+  position: fixed;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 45px;
+      width: auto;
+      left: 3px;
+
+      top: 50px;
+      position: relative;
+      filter: drop-shadow(0 0 12px #ffd700) drop-shadow(0 0 24px #ffec8b);
+    
+    }
+    .d-flex {
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 50px;
+    }
+  }
+
+  
+  .nav-link {
+    font-weight: 500;
+    color: #343a40;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    font-size: 17px;
+    margin-left: 62px;
+    top: 35px;
+    &:hover {
+      color: #007bff;
+    }
+    
+    i {
+      font-size: 1rem;
+      margin-right: 5px;
+    }
+  }
+  ul.navbar-nav.ms-auto.mb-2.mb-lg-0 {
+      list-style: none;
+      display: flex;
+      left: 279px;
+      position: relative;
+      top: -17px;
+    }
+
+    
+ 
+
+  .btn {
+    background: none;
+    border: none;
+    
+    left: 57pc;
+    justify-content: space-between;
+    display: flex;
+    font-size: 1rem;
+    margin-left: 54px;
+
+
+    &.btn-outline-secondary.me-2 {
+       background-color: #d7a23a;
+      padding: 10px 38px;
+      border-radius: 28px;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      left: 906px;
+      bottom: 16px;
+    }
+
+    &.btn-outline-success {
+      background-color: #29327c;
+      padding: 10px 38px;
+      top: -60px;
+      border-radius: 28px;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      left: 1026px;
+      top: -55px;
+    }
+
+    &.btn-outline-primary {
+      font-size: 30px;
+      // max-width: 992px
+      // top: -28px;
+    }
+    .d-flex {
+      display: flex;
+      align-items: center;
+    }
+    .me-2 {
+      margin-right: 0.5rem;
+    }
+    .navbar-collapse {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+      padding: 0.5rem 0;
+
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+

@@ -1,0 +1,97 @@
+.ride-history-container {
+  display: flex;
+  justify-content: flex-start; /* Align card to the top */
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; /* Fill the parent to allow vertical centering */
+  box-sizing: border-box;
+}
+ 
+.ride-history-card {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+
+.ride-history-card h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem; /* Reduced bottom margin */
+  font-weight: 600;
+}
+ 
+.ride-history-card h2 {
+  margin-top: 2rem; /* Reduced top margin */
+  margin-bottom: 1rem; /* Reduced bottom margin */
+  color: var(--text-color);
+  font-size: 1.5rem;
+  text-align: left;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+ 
+.earnings-table-container {
+  overflow-x: auto;
+}
+ 
+.earnings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+ 
+.earnings-table th,
+.earnings-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+ 
+.earnings-table th {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-weight: 600;
+}
+ 
+.earnings-table tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+.earnings-table tr:hover {
+  background-color: #e9ecef; /* A slightly darker, standard hover color */
+  transition: background-color 0.2s ease;
+}
+
+.ride-history-card.no-rides {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-style: dashed;
+  border-color: var(--border-color);
+  background-color: var(--secondary-color);
+}
+
+.no-rides-icon {
+  font-size: 4rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.ride-history-card.no-rides h1 {
+  margin-bottom: 1rem;
+}
+
+.ride-history-card.no-rides p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

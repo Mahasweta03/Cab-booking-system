@@ -1,0 +1,21 @@
+ 
+.dashboard-container {
+  display: flex;
+  padding-top: 70px; // height of topbar
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+ 
+/* This is the content area next to the sidebar */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 220px; // same as sidebar width
+  transition: margin-left 0.3s ease;
+}
+ 
+/* Optional: if sidebar is hidden, adjust margin */
+.sidebar-hidden .main-content {
+  margin-left: 0;
+}
+ 

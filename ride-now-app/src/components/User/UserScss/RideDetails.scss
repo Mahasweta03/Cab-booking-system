@@ -1,0 +1,130 @@
+$primary-color: #ffffff;
+$secondary-color: #28a745;
+$background-color: #f8f9fa;
+$text-color: #343a40;
+$heading-color: #161e27;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$border-radius: 12px;
+
+.ride-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color;
+  width: 100%;
+  padding: 2rem;
+
+  .loading, .no-ride {
+    text-align: center;
+    padding: 2rem;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    
+    h3 {
+      color: $heading-color;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: $text-color;
+    }
+  }
+
+  .ride-details-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $heading-color;
+      margin-bottom: 2rem;
+    }
+
+    .ride-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      text-align: left;
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: rgba(40, 167, 69, 0.05);
+        border-radius: 8px;
+        border-left: 4px solid $secondary-color;
+
+        .info-icon {
+          font-size: 1.2rem;
+          color: $secondary-color;
+          min-width: 20px;
+        }
+
+        span {
+          flex-grow: 1;
+          color: $text-color;
+          font-weight: 500;
+        }
+
+        b {
+          font-size: 1rem;
+          color: $heading-color;
+          font-weight: 600;
+        }
+
+        &.otp-item {
+          background-color: rgba(40, 167, 69, 0.15);
+          border-left: 4px solid $secondary-color;
+          
+          .info-icon {
+            color: $secondary-color;
+          }
+          
+          b {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      
+      .payment-button {
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: $border-radius;
+        cursor: pointer;
+        border: none;
+        background-color: $secondary-color;
+        color: white;
+        transition: all 0.3s ease;
+        min-width: 200px;
+
+        &:hover {
+          background-color: darken($secondary-color, 5%);
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

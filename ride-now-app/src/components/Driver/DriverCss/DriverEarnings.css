@@ -1,0 +1,100 @@
+.driver-earnings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  margin-left: 15rem; 
+  padding-top: 5rem;       
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.driver-earnings-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 56.25rem; /* 900px */
+  width: 100%;
+  border: 0.125rem solid #ffd724;
+}
+
+.driver-earnings-card h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.75rem;
+}
+
+.earnings-table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.earnings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.earnings-table th,
+.earnings-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+}
+
+.earnings-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.earnings-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.earnings-chart {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .driver-earnings-container {
+    margin-left: 0;
+    padding-top: 4rem;
+  }
+
+  .driver-earnings-card {
+    padding: 1.5rem;
+  }
+
+  .driver-earnings-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .earnings-table th,
+  .earnings-table td {
+    font-size: 0.95rem;
+    padding: 0.625rem 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .driver-earnings-card {
+    padding: 1rem;
+  }
+
+  .driver-earnings-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .earnings-table th,
+  .earnings-table td {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+}

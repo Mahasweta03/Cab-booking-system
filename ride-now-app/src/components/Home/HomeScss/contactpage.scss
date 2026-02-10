@@ -1,0 +1,354 @@
+/* --- Contact Page Styling --- */
+
+// Variables (matching the existing color scheme from footer.scss)
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$text-color: #333;
+$light-text: #ecf0f1;
+$border-color: #e0e0e0;
+$success-color: #2ecc71;
+$error-color: #e74c3c;
+$hover-color: darken($primary-color, 10%);
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+.contact-container {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-color;
+  
+  // Hero section with background gradient
+  .contact-hero {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 73px;
+    
+    .contact-hero-overlay {
+      background-color: rgba($secondary-color, 0.7);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      
+      h1 {
+        color: white;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+      p {
+        color: $light-text;
+        font-size: 1.2rem;
+        max-width: 700px;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  // Main content section
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    gap: 3rem;
+    
+    .contact-info {
+      flex: 1 1 400px;
+      
+      h2 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 1.5rem;
+        position: relative;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background-color: $primary-color;
+        }
+      }
+      
+      > p {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        color: #666;
+      }
+      
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        .contact-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.5rem;
+          
+          .contact-icon {
+            font-size: 1.8rem;
+            color: $primary-color;
+            margin-top: 0.3rem;
+          }
+          
+          h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: $secondary-color;
+          }
+          
+          p {
+            margin: 0.2rem 0;
+            color: #666;
+          }
+        }
+      }
+    }
+    
+    .contact-form-container {
+      flex: 1 1 500px;
+      background-color: white;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: $box-shadow;
+      
+      h2 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 1.5rem;
+        position: relative;
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background-color: $primary-color;
+        }
+      }
+      
+      .form-success {
+        background-color: rgba($success-color, 0.1);
+        color: $success-color;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid $success-color;
+      }
+      
+      .form-error {
+        background-color: rgba($error-color, 0.1);
+        color: $error-color;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid $error-color;
+      }
+      
+      .contact-form {
+        .form-group {
+          margin-bottom: 1.5rem;
+          
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            
+            .required {
+              color: $error-color;
+            }
+          }
+          
+          input, textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            
+            &:focus {
+              outline: none;
+              border-color: $primary-color;
+              box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+            }
+            
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+          
+          textarea {
+            resize: vertical;
+          }
+        }
+        
+        .form-row {
+          display: flex;
+          gap: 1.5rem;
+          
+          .form-group {
+            flex: 1;
+          }
+        }
+        
+        .submit-button {
+          background-color: $primary-color;
+          color: white;
+          border: none;
+          padding: 1rem 2rem;
+          font-size: 1rem;
+          font-weight: 600;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 100%;
+          
+          &:hover {
+            background-color: $hover-color;
+          }
+        }
+      }
+    }
+  }
+  
+  // Map section
+  .map-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    
+    h2 {
+      font-size: 2rem;
+      color: $secondary-color;
+      margin-bottom: 1.5rem;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: $primary-color;
+      }
+    }
+    
+    .map {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: $box-shadow;
+      margin-top: 2rem;
+      height: 450px;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+  
+  // FAQ section
+  .faq-section {
+    max-width: 1200px;
+    margin: 3rem auto 5rem;
+    padding: 0 2rem;
+    
+    h2 {
+      font-size: 2rem;
+      color: $secondary-color;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: $primary-color;
+      }
+    }
+    
+    .faq-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 2rem;
+      
+      .faq-item {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: translateY(-5px);
+        }
+        
+        h3 {
+          font-size: 1.3rem;
+          color: $secondary-color;
+          margin-bottom: 1rem;
+        }
+        
+        p {
+          color: #666;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .contact-container {
+    .contact-hero {
+      height: 300px;
+      
+      .contact-hero-overlay {
+        h1 {
+          font-size: 2.5rem;
+        }
+        
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    
+    .contact-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .faq-section {
+      .faq-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
