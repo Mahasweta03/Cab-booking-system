@@ -46,3 +46,66 @@ This system allows users to book rides, manage ride history, and enables admins 
 
 ### 🚕 Driver Registration
 `Frontend_Snippets/DriverRegister.png`
+
+
+
+## 🛠 Tech Stack  
+
+### **Frontend**
+- HTML5  
+- CSS3  
+- JavaScript  
+- Razor Pages / MVC  
+
+### **Backend**
+- ASP.NET Core  
+- C#, LINQ  
+- Entity Framework Core  
+
+### **Database**
+- Microsoft SQL Server  
+
+### **Tools**
+- Visual Studio Code
+- Visual Studio
+- Git & GitHub  
+- EF Core  
+
+---
+
+## 📂 Project Structure
+Cab-booking-system/
+│
+├── Controllers/
+├── Models/
+├── Views/
+├── Migrations/
+├── Backend_Snippets/
+├── Frontend_Snippets/
+├── images/
+├── wwwroot/
+├── appsettings.json
+├── Program.cs
+└── README.md
+
+---
+
+## 🗄 Database Design
+
+### **Entities**
+- Home
+- User  
+- Driver  
+- Ride Booking
+- Payment
+- Rating
+
+
+## ⚙️ Setup Instructions  
+
+### ✔ 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Cab-booking-system.git
+cd Cab-booking-system
+
