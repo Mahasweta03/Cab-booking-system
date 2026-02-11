@@ -104,8 +104,56 @@ Cab-booking-system/
 ## ⚙️ Setup Instructions  
 
 ### ✔ 1. Clone the repository
-
 ```bash
 git clone https://github.com/YOUR_USERNAME/Cab-booking-system.git
 cd Cab-booking-system
+```
+### ✔ 2. Restore dependencies
+```bash
+dotnet restore
+```
+### ✔ 3. Configure connection string
+Open appsettings.json:
+```bash
+"ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=CabBookingDB;Trusted_Connection=True;"
+}
+```
+### ✔ 4. Apply database migrations
+```bash
+dotnet ef database update
+```
+### 🧪 EF Core Migrations
+To add new migrations:
+```bash
+dotnet ef migrations add MigrationName
+```
+To apply migrations:
+```bash
+dotnet ef database update
+```
 
+### 🚀 How to Run
+```bash
+dotnet run
+```
+Then open your browser:
+``` https://localhost:5001``` or ``` http://localhost:5000 ```
+
+### 🔐 Environment Variables
+Optional .env or secret storage:
+```
+DB_USER=yourUsername
+DB_PASSWORD=yourPassword
+DB_NAME=CabBookingDB
+```
+
+### 🤝 Contribution
+Contributions, issues, and feature requests are welcome!
+Feel free to fork the repository and submit pull requests.
+
+### 📜 License
+This project is licensed under the MIT License.
+
+### 👩‍💻 Author
+Mahasweta Saha
