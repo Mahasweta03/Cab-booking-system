@@ -35,17 +35,17 @@ This system allows users to book rides, manage ride history, and enables admins 
 
 ### 🖥 Landing Page
 ![Landing Page](Frontend_Snippets/HeroPage.png)
-`Frontend_Snippets/LandingPage.png`
-`Frontend_Snippets/LandingPagep2.png`
+![Landing Page](Frontend_Snippets/LandingPage.png)
+![Landing Page](Frontend_Snippets/LandingPagep2.png)
 
 ### 🚖 Booking Page
-`Frontend_Snippets/CabBook.png`
+![Booking Page](Frontend_Snippets/CabBook.png)
 
 ### 👤 User Registration
-`Frontend_Snippets/UserRegistration.png`
+![User Registration Page](Frontend_Snippets/UserRegistration.png)
 
 ### 🚕 Driver Registration
-`Frontend_Snippets/DriverRegister.png`
+![Driver Registration Page](Frontend_Snippets/DriverRegister.png)
 
 
 
