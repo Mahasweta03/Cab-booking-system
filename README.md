@@ -34,7 +34,7 @@ This system allows users to book rides, manage ride history, and enables admins 
 ## 📸 Screenshots
 
 ### 🖥 Landing Page
-`Frontend_Snippets/HeroPage.png`
+![Landing Page](Frontend_Snippets/HeroPage.png)
 `Frontend_Snippets/LandingPage.png`
 `Frontend_Snippets/LandingPagep2.png`
 
