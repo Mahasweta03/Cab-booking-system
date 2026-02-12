@@ -39,7 +39,7 @@ This system allows users to book rides, manage ride history, and enables admins 
 ![Landing Page](Frontend_Snippets/LandingPagep2.png)
 
 ### 🚖 Booking Page
-![Booking Page](Frontend_Snippets/CabBook.png)
+![Booking Page](Frontend_Snippets/CabBook.PNG)
 
 ### 👤 User Registration
 ![User Registration Page](Frontend_Snippets/UserRegistration.png)
